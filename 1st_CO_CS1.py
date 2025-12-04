@@ -46,18 +46,18 @@ def greyYellowDoor():
             exit("Sorry, I don't understand your input goodbye.")
 
 def lightSwitch():
-        print("You feel the wall for a light switch. The walls feel almost sticky and vibrate slightly. You finally find a switch and flick it on. Suddenly it's as if the sun was spawned within the room.")
-        print("You go blind for a few seconds, and fall to the ground holding your eyes. The pain subsides and you stand back up and uncover your eyes. You look around and realize...You are in a laboratory type place.")
-        print("There is a massive tank in the middle of the room surrounded by wires and computers. You can't see inside as it is too murky. You look around at some of the papers on the desk, there are numbers and symbols you do not understand.")
+    print("You feel the wall for a light switch. The walls feel almost sticky and vibrate slightly. You finally find a switch and flick it on. Suddenly it's as if the sun was spawned within the room.")
+    print("You go blind for a few seconds, and fall to the ground holding your eyes. The pain subsides and you stand back up and uncover your eyes. You look around and realize...You are in a laboratory type place.")
+    print("There is a massive tank in the middle of the room surrounded by wires and computers. You can't see inside as it is too murky. You look around at some of the papers on the desk, there are numbers and symbols you do not understand.")
 
-        redButton = int(input("There is a big red button next to the tank. Do you press it (1), or leave the room (2)"))
+    redButton = int(input("There is a big red button next to the tank. Do you press it (1), or leave the room (2)"))
 
-        if redButton == 1:
-            pressButton()
-        elif redButton == 2:
-            leaveRoom()
-        else:
-            exit("Sorry, I don't understand your input goodbye.")
+    if redButton == 1:
+        pressButton()
+    elif redButton == 2:
+        leaveRoom()
+    else:
+        exit("Sorry, I don't understand your input goodbye.")
 
 def pressButton():
     print("You pressed the button next to the tank, and the water starts to drain. You take a couple steps back, but you are too intrigued to leave. As the water drains, the tank's glass starts to clear.")
@@ -101,20 +101,60 @@ def outside():
         bossFight()
     elif seaNypmh == 'no' or seaNypmh == 'No':
         exit("Your mind is closed, open it.")
-    elif
+    #elif
         beatGame()
-    elif
+    #elif
 
     else:
         exit("Sorry, you didn't open your mind. Goodbye.")
 
+gameDict = {
+    "Octopus" : {
+        "Name" : "Octopus",
+        "HP" : 1000000000,
+        "Damage" : 5000,
+    },
+    "Player" : {
+        "Name" : userName,
+        "HP" : 100,
+        "Damage" : 50,
+    }
+}
+
+#combat loop
+def combatCode():
+    for i in range(5, 0, -1):
+        print(i)
+    else:
+        raise Exception("Your light fades out.")
+
+class Characters:
+    def __init__(self, health, damage, speed):
+        self.health = health
+        self.damage = damage
+        self.speed = speed
+
+    def damageDone(self):
+        for i in range(10):
+            time.sleep(1)
+            self.health -= random.randint(1, 6)
+            print(f"warrior new health: {warrior.health}")
+
+    def healDone(self):
+        warrior.health += 30
+        if warrior.health > 100:
+            warrior.health = 100
+
+warrior = Characters(100, 20, 30)
+
 def bossFight():
+    combatCode()
 
 def leaveRoom():
     print("You decide to leave as soon as you enter the room. So you walk out and head outside.")
     outside()
 
-    def coward():
-        print("")
+'''def coward():
+    print("")'''
 
 storyGame()
